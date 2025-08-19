@@ -9,7 +9,6 @@ resource "aws_security_group" "vpc-ssh" {
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
-
   egress {
     description = "Allow all ip and ports outbound"    
     from_port   = 0
@@ -17,7 +16,6 @@ resource "aws_security_group" "vpc-ssh" {
     protocol    = "-1"
     cidr_blocks = ["0.0.0.0/0"]
   }
-
   tags = {
     Name = "vpc-ssh"
   }
@@ -48,7 +46,6 @@ resource "aws_security_group" "vpc-web" {
     protocol    = "-1"
     cidr_blocks = ["0.0.0.0/0"]
   }
-
   tags = {
     Name = "vpc-web"
   }
